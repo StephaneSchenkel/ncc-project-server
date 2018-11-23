@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+        backend:
+                image: ncc-project-server
+                ports:
+                        - "8090:8090"
+        frontend:
+                image: ncc-project-client
+                depends_on:
+                        - backend
